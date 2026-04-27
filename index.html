@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+       CUSTOM LINK CONFIG — Edit these values
+       ============================================= -->
+  <title>Manajemen RT</title>
+
+  <!-- Custom favicon / icon -->
+  <!-- Replace the href below with your own icon URL (PNG, ICO, SVG, etc.) -->
+  <link rel="icon" type="image/png" href="https://e7.pngegg.com/pngimages/526/91/png-clipart-website-home-page-home-inspection-house-size-icon-homepage-miscellaneous-blue-thumbnail.png" />
+
+  <!-- Open Graph (for link previews on WhatsApp, Telegram, etc.) -->
+  <meta property="og:title"       content="GBM RT07" />
+  <meta property="og:description" content="Custom link powered by Google Apps Script" />
+  <meta property="og:image"       content="https://e7.pngegg.com/pngimages/526/91/png-clipart-website-home-page-home-inspection-house-size-icon-homepage-miscellaneous-blue-thumbnail.png" />
+  <meta property="og:url"         content="" /> <!-- filled automatically -->
+  <meta property="og:type"        content="website" />
+
+  <!-- =============================================
+       TARGET URL — Replace with your Apps Script
+       Web App URL (the /exec endpoint)
+       ============================================= -->
+  <script>
+    const TARGET_URL = "https://script.google.com/macros/s/AKfycby-ARPYKHbsqUJ-Lp4SnBLvcGn1BdlNmrJMrzhCQS9D6m-WzxQW5bqschyIeNozhl8l/exec";
+    // Append any query params from this page's URL to the redirect
+    const params = window.location.search;
+    window.location.replace(TARGET_URL + params);
+  </script>
+
+  <style>
+    /* Shown briefly while JS redirects */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #0d1117;
+      --surface: #161b22;
+      --border:  #30363d;
+      --accent:  #58a6ff;
+      --text:    #e6edf3;
+      --muted:   #8b949e;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: var(--text);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+      animation: fadeIn .5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      margin: 0 auto 1.2rem;
+      display: block;
+    }
+
+    h1 { font-size: 1.3rem; font-weight: 600; margin-bottom: .5rem; }
+
+    p  { color: var(--muted); font-size: .9rem; margin-bottom: 1.5rem; line-height: 1.5; }
+
+    .spinner {
+      width: 28px; height: 28px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .btn {
+      display: inline-block;
+      padding: .6rem 1.4rem;
+      background: var(--accent);
+      color: #0d1117;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      transition: opacity .2s;
+    }
+    .btn:hover { opacity: .85; }
+
+    .badge {
+      margin-top: 1.5rem;
+      font-size: .75rem;
+      color: var(--muted);
+    }
+    .badge a { color: var(--accent); text-decoration: none; }
+    .badge a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Replace src with your own app icon -->
+    <img
+      class="icon"
+      src="https://www.gstatic.com/images/branding/product/2x/apps_script_48dp.png"
+      alt="App icon"
+    />
+    <h1>My Apps Script App</h1>
+    <p>Redirecting you to the app…<br />If nothing happens, click the button below.</p>
+
+    <div class="spinner"></div>
+
+    <a id="manual-link" class="btn" href="#">Open App</a>
+
+    <p class="badge">
+      Hosted on <a href="https://github.com" target="_blank">GitHub</a> &middot;
+      Powered by <a href="https://developers.google.com/apps-script" target="_blank">Google Apps Script</a>
+    </p>
+  </div>
+
+  <script>
+    // Also set the fallback button href
+    const link = document.getElementById("manual-link");
+    link.href = TARGET_URL + window.location.search;
+  </script>
+</body>
+</html>
