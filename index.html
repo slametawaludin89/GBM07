@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Nama Aplikasi</title>
+ <link rel="icon" href="https://e7.pngegg.com/pngimages/526/91/png-clipart-website-home-page-home-inspection-house-size-icon-homepage-miscellaneous-blue-thumbnail.png" />
+ <style>
+  html, body {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #eee;
+   overflow: hidden; /* Mencegah scroll ganda */
+  }
+
+  .iframe-container {
+   width: 100%;
+   height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
+   overflow: hidden;
+  }
+
+  iframe {
+   display: block;
+   width: 100%;
+   height: 100%;
+   border: none;
+  }
+ </style>
+</head>
+<body>
+ <div class="iframe-container">
+  <iframe
+  id="app"
+  src="https://script.google.com/macros/s/AKfycby-ARPYKHbsqUJ-Lp4SnBLvcGn1BdlNmrJMrzhCQS9D6m-WzxQW5bqschyIeNozhl8l/exec"
+  scrolling="yes"
+  allowfullscreen="true"
+  webkitallowfullscreen="true"
+  mozallowfullscreen="true"
+  allow="fullscreen; camera; microphone; display-capture; goelocation;">
+</iframe>
+</div>
+</body>
+</html>
